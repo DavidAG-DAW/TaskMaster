@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TaskMaster - Gestor de Tareas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <h1>TaskMaster</h1>
+
+    <button id="modoOscuroBtn">Modo Oscuro</button>
+    <button id="btnExportar">Descargar JSON de tareas</button>
+
+    <section>
+        <form id="formTarea">
+            <input type="text" id="titulo" placeholder="Título" required>
+            <textarea id="descripcion" placeholder="Descripción"></textarea>
+
+            <select id="prioridad" required>
+                <option value="">Seleccione prioridad</option>
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baja">Baja</option>
+            </select>
+
+            <button type="submit">Guardar</button>
+        </form>
+    </section>
+
+    <section>
+        <input type="text" id="buscador" placeholder="Buscar tarea...">
+        <button type="button" id="btnBuscar">Buscar</button> <select id="filtroEstado">
+            <option value="Todas">Todas</option>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Completada">Completada</option>
+        </select>
+    </section>
+
+    <section id="listaTareas"></section>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
